@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -6,8 +5,7 @@
 
 // --- Constantes Globais ---
 #define MAX_TERRITORIO 5
-//#define MAX_EMPRESTIMOS 100 // Definimos uma capacidade para empréstimos.
-//#define TAM_STRING 100
+
 
 // --- Definição da Estrutura (STruct) ---
 // struct de livro agora tem um campo 'disponivel' para controlar o status
@@ -15,10 +13,7 @@ struct Territorio{
     char nome[30];
     char cor[10];
     int numero;
-};
-
-// Nova Struct para armazenar informações do emprestimo.
- 
+}; 
 
 // --- Função de limpar o buffer de entrada ---
 void limparBufferEntrada() {
@@ -28,13 +23,10 @@ void limparBufferEntrada() {
 
 // === Função Principal (main) ---
 int main() {
-    // 1. ALOCAÇÃO DINÂMICA DE MEMÓRIA
-    // Agora, em vez de arrays estáticos, usamos ponteiros.
-    struct Territorio *mapa;
+       struct Territorio *mapa;
 
 
-    // Usando calloc para o array de livros. calloc(num_elementos, tamanho_de_cada_elemento)
-    // vantagem: inicializa toda memória com zeros. Isso significa que 'disponivel' já comaça com zero
+    // Usando calloc // vantagem: inicializa toda memória com zeros. Isso significa que 'disponivel' já comaça com zero
     mapa =(struct Territorio *) calloc(MAX_TERRITORIO, sizeof(struct Territorio));
 
     // Verificação; é crucial verificar se a alocação de memória deu certo.
@@ -89,9 +81,9 @@ do{
 
     // Gera e imprime um número aleatório entre 1 e 6
     dado1 = (rand() % 6) + 1;
-    //printf("O número sorteado é: %d\n", dado1);
+    
     dado2 = (rand() % 6) + 1;
-   // printf("O número sorteado é: %d\n", dado2);
+   
 
     // laço para exibir os dados
          printf("===================================\n");
